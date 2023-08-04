@@ -59,6 +59,47 @@ class ChandraYan3{
         }
     }
 
+    moveBackword(){
+        if(this.currDirection == 'n'){
+            if(this.y-1 >= -1*this.galaxy.ynBoundry){
+                this.y -= 1;
+            }else{
+                throw Error("Chandrayan move out of y boundry of galaxy");
+            }
+        }else if(this.currDirection == 's'){
+            if(this.y+1 <= this.galaxy.ypBoundry){
+                this.y += 1;
+            }else{
+                throw Error("Chandrayan move out of y boundry of galaxy");
+            }
+        } else if(this.currDirection == 'e'){
+            if(this.x-1 >= -1*this.galaxy.xnBoundry){
+                this.x -= 1;
+            }else{
+                throw Error("Chandrayan move out of x boundry of galaxy");
+            }
+        }else if(this.currDirection == 'w'){
+            if(this.x+1 <= this.galaxy.xpBoundry){
+                this.x += 1;
+            }else{
+                throw Error("Chandrayan move out of x boundry of galaxy");
+            }
+        }else if(this.currDirection == 'u'){
+            if(this.z-1 >= -1*this.galaxy.znBoundry){
+                this.z -= 1;
+            }
+            else{
+                throw Error("Chandrayan move out of z boundry of galaxy");
+            }
+        }else if(this.currDirection == 'd'){
+            if(this.z+1 <= this.galaxy.zpBoundry){
+                this.z += 1;
+            }else{
+                throw Error("Chandrayan move out of z boundry of galaxy");
+            }
+        }
+    }
+
     printCurrStat(){
         console.log("( "+this.x+", "+this.y+", "+this.z+", "+this.currDirection+" )");
     }
@@ -69,6 +110,9 @@ class ChandraYan3{
             case 'f':
                 this.moveForward();
                 break;  
+            case 'b':
+                this.moveBackword();
+                break;
             default:
                 throw Error("Invalid command");
         }

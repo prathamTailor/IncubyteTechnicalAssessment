@@ -55,5 +55,20 @@ describe('Testing of chandrayan', () => {
         }
         
     });
+
+    test('Testing backForward function with correct command', () => {
+        command = "b";
+        chandrayan3.x = 1;
+        chandrayan3.currDirection = 'e';
+        try{
+            chandrayan3.moveChandrayan(command);
+        }catch(e){
+            expect(e.message).toEqual("");
+        }
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(0);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('e');
+    });
  });
  
