@@ -113,5 +113,37 @@ describe('Testing of chandrayan', () => {
         }
     });
 
+    test('Testing Turn Left function', () => {
+        chandrayan3.turnLeft();
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(0);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('w');
+    });
+
+    test('Testing Turn Right function', () => {
+        chandrayan3.currDirection = 's';
+        chandrayan3.turnRight();
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(0);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('w');
+    });
+
+    test('Testing Turn Up function', () => {
+        chandrayan3.turnUp();
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(0);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('u');
+    });   
+    
+    test('Testing Turn Down function', () => {
+        chandrayan3.turnDown();
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(0);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('d');
+    });  
  });
  

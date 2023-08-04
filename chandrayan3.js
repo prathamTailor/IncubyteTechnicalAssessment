@@ -100,6 +100,46 @@ class ChandraYan3{
         }
     }
 
+    turnLeft(){
+        if(this.currDirection == 'n'){
+            this.currDirection = 'w';
+        }else if(this.currDirection == 's'){
+            this.currDirection = 'e';
+        } else if(this.currDirection == 'e'){
+            this.currDirection = 'n';
+        }else if(this.currDirection == 'w'){
+            this.currDirection = 's';
+        }else if(this.currDirection == 'u'){
+            this.currDirection = 'w';
+        }else if(this.currDirection == 'd'){
+            this.currDirection = 'e';
+        }
+    }
+
+    turnRight(){
+        if(this.currDirection == 'n'){
+            this.currDirection = 'e';
+        }else if(this.currDirection == 's'){
+            this.currDirection = 'w';
+        } else if(this.currDirection == 'e'){
+            this.currDirection = 's';
+        }else if(this.currDirection == 'w'){
+            this.currDirection = 'n';
+        }else if(this.currDirection == 'u'){
+            this.currDirection = 'e';
+        }else if(this.currDirection == 'd'){
+            this.currDirection = 'w';
+        }
+    }
+
+    turnUp(){
+        this.currDirection = 'u';
+    }
+
+    turnDown(){
+        this.currDirection = 'd';
+    }
+
     printCurrStat(){
         console.log("( "+this.x+", "+this.y+", "+this.z+", "+this.currDirection+" )");
     }
@@ -112,6 +152,18 @@ class ChandraYan3{
                 break;  
             case 'b':
                 this.moveBackword();
+                break;
+            case 'l':
+                this.turnLeft();
+                break;
+            case 'r':
+                this.turnRight();
+                break;  
+            case 'u':
+                this.turnUp();
+                break;
+            case 'd':
+                this.turnDown();
                 break;
             default:
                 throw Error("Invalid command");
