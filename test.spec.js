@@ -22,7 +22,7 @@ describe('Testing of chandrayan', () => {
         expect(chandrayan3.galaxy.znBoundry).toBe(3);
     });
 
-    test('Testing moveForward function with invalid command', () => {
+    test('Testing moveChandrayan function with invalid command', () => {
         command = "zp";
         try{
             chandrayan3.moveChandrayan(command);
@@ -31,7 +31,7 @@ describe('Testing of chandrayan', () => {
         }
     });
 
-    test('Testing moveForward function with correct command', () => {
+    test('Testing moveChandrayan function with correct command', () => {
         command = "f";
         try{
             chandrayan3.moveChandrayan(command);
@@ -44,7 +44,7 @@ describe('Testing of chandrayan', () => {
         expect(chandrayan3.currDirection).toBe('n');
     });
 
-    test('Testing moveForward function with correct command but out of galaxys y boundry', () => {
+    test('Testing moveChandrayan function with correct command but out of galaxys y boundry', () => {
         command = "f";
         chandrayan3.y=3;
 
@@ -56,7 +56,7 @@ describe('Testing of chandrayan', () => {
         
     });
 
-    test('Testing backForward function with correct command', () => {
+    test('Testing moveChandrayan function with correct command', () => {
         command = "b";
         chandrayan3.x = 1;
         chandrayan3.currDirection = 'e';
@@ -70,5 +70,6 @@ describe('Testing of chandrayan', () => {
         expect(chandrayan3.z).toBe(0);
         expect(chandrayan3.currDirection).toBe('e');
     });
+
  });
  
