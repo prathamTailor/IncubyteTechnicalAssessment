@@ -1,0 +1,22 @@
+{
+  "name": "incubytetechnicalassessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prathamTailor/IncubyteTechnicalAssessment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prathamTailor/IncubyteTechnicalAssessment/issues"
+  },
+  "homepage": "https://github.com/prathamTailor/IncubyteTechnicalAssessment#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
