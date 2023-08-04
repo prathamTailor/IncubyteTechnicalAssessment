@@ -71,5 +71,47 @@ describe('Testing of chandrayan', () => {
         expect(chandrayan3.currDirection).toBe('e');
     });
 
+    test('Testing moveForward function', () => {
+        try{
+            chandrayan3.moveForward();
+        }catch(e){
+            expect(e.message).toEqual("");
+        }
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(1);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('n');
+    });
+
+    test('Testing moveForward function with the case then boundry error will come', () => {
+        chandrayan3.y = 3;
+        try{
+            chandrayan3.moveForward();
+        }catch(e){
+            expect(e.message).toEqual("Chandrayan move out of y boundry of galaxy");
+        }
+    });
+
+    test('Testing moveBackward function', () => {
+        try{
+            chandrayan3.moveBackword();
+        }catch(e){
+            expect(e.message).toEqual("");
+        }
+        expect(chandrayan3.x).toBe(0);
+        expect(chandrayan3.y).toBe(-1);
+        expect(chandrayan3.z).toBe(0);
+        expect(chandrayan3.currDirection).toBe('n');
+    });
+
+    test('Testing moveBackward function with the case then boundry error will come', () => {
+        chandrayan3.y = -3;
+        try{
+            chandrayan3.moveBackword();
+        }catch(e){
+            expect(e.message).toEqual("Chandrayan move out of y boundry of galaxy");
+        }
+    });
+
  });
  
